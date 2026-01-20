@@ -8,12 +8,18 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
       />
-      <link href="/recipes/styles/main.css" rel="stylesheet" type="text/css" />
-      <title>Recipies</title>
-      <link href="/recipes/images/comp_icon [org].ico" rel="icon" type="image/x-icon" />
-    </head>
+      <link href="styles/main.css" rel="stylesheet" type="text/css" />
+      <title>Recipes</title>
 
-    <body lang="en-nl" dir="ltr">
+      <link href="images/recipes.ico" rel="icon" type="image/x-icon" />
+      <!-- Alle JavaScript bestanden voor Advanced Grow Devices -->
+      <script src="styles/storage.js" defer></script>
+      <script src="styles/clock.js" defer></script>
+      <script src="styles/scrll.js" defer></script>
+      <script src="styles/acc.js" defer></script>
+      <script src="styles/main.js" defer></script>
+    </head>
+    <body>
       <div class="bgimage"></div>
       <div class="chapter"></div>
       <div class="clock">
@@ -77,7 +83,7 @@
           <span id="footer-year"></span>
           <span id="footer-company"></span>
           <span
-            >-&ensp;All Rights Reserved&emsp;||&emsp;UI-GUI-UX design
+            >-&ensp;All Rights Reserved&emsp;||&emsp;UI-GUI-UX- design
             by:&ensp;</span
           >
           <span id="footer-author-alias"></span>
@@ -101,25 +107,18 @@
       </div>
       <div class="menu">
         <div class="rbut" id="Profile">
-          <a onclick="faddUIContent('/recipes/data/profile-min.json', 'profile')">
+          <a onclick="faddUIContent('data/profile-min.json', 'profile')">
             <div class="rbut-content">
-              <img src="/recipes/images/profile.png" />
+              <img src="images/profile.png" />
               <h2>Profile</h2>
             </div>
           </a>
         </div>
         <div class="rbut" id="Device">
-          <a
-            onclick="
-              faddUIContent(
-                '/devices/clone-booster/1.0/data/device-min.json',
-                'device',
-              )
-            "
-          >
+          <a onclick="faddUIContent('data/recipes.json', 'devices')">
             <div class="rbut-content">
-              <img src="/recipes/images/device.png" />
-              <h2>Device</h2>
+              <img src="images/recipes.png" />
+              <h2>Recipes</h2>
             </div>
           </a>
         </div>
@@ -143,20 +142,30 @@
           <a
             onclick="
               faddUIContent(
-                '/training/data/training-min.json',
+                'https://technical-grow-solutions.github.io/training/data/training-min.json',
                 'training',
                 false,
               )
             "
           >
             <div class="rbut-content">
-              <img src="/images/training.png" />
+              <img
+                src="https://technical-grow-solutions.github.io/images/training.png"
+              />
               <h2>Training</h2>
             </div>
           </a>
         </div>
         <div class="rbut" id="Store">
-          <a onclick="faddUIContent('/store/index.html', 'store', false)">
+          <a
+            onclick="
+              faddUIContent(
+                'https://technical-grow-solutions.github.io/store/index.html',
+                'store',
+                false,
+              )
+            "
+          >
             <div class="rbut-content">
               <img
                 src="https://technical-grow-solutions.github.io/images/store.png"
@@ -168,7 +177,11 @@
         <div class="rbut" id="Catalog">
           <a
             onclick="
-              faddUIContent('/catalog/data/catalog-min.json', 'catalog', false)
+              faddUIContent(
+                'https://technical-grow-solutions.github.io/catalog/data/catalog-min.json',
+                'catalog',
+                false,
+              )
             "
           >
             <div class="rbut-content">
@@ -208,12 +221,6 @@
       <div class="ui">
         <div class="ui-content" onscroll="scrollPercentage"></div>
       </div>
-      <!-- Scripts met defer laden zodat de DOM eerst geladen wordt -->
-      <script src="/recipes/styles/main.js" defer></script>
-      <script src="/recipes/styles/acc.js" defer></script>
-      <script src="/recipes/styles/clock.js" defer></script>
-      <script src="/recipes/styles/scrll.js" defer></script>
-      <script src="/recipes/styles/storage.js" defer></script>
     </body>
   </html>
 </html>
